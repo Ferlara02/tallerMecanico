@@ -3,9 +3,8 @@
     margin: 0%;
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     background-color: white;
 }
 .containerBody {
@@ -968,25 +967,6 @@ body {
     /*cierra contacto*/
 }
 
-
-
-.servRotura img {
-    height: 40%;
-}
-
-/*servicios*/
-.serv {
-    margin: 100px 20px 20px 20px;
-}
-.serv iframe {
-    margin: 1px 500px 50px;
-}
-.servText{
-    text-align: center;
-    margin: 40px 200px 20px 200px;
-}
-
-/*cierra servicios*/
 
 /*footer*/
 footer {

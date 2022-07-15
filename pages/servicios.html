@@ -4,89 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="https://kit.fontawesome.com/0fa52e5c73.js" crossorigin="anonymous"></script>
     <title> Servicios - WRG </title>
 </head>
-<body>
+<body class="serv">
     <header>
-        <div class="logo">
-            <a title="logo" href="../index.html"><img src="../img/logo.png" alt="logo"></a>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a class="menuPages" href="../index.html">
-                        Inicio
-                    </a>
-                </li>
-                <li>
-                    <a class="menuPagesA" href="servicios.html">
-                        Servicios
-                    </a>        
-                </li>
-                <li>
-                    <a class="menuPages" href="nosotros.html">
-                        Nosotros
-                    </a>
-                </li>
-                <li>
-                    <a class="menuPages" href="motores.html">
-                        Motores
-                    </a>
-                </li>
-                <li>
-                    <a class="menuPages" href="contacto.html">
-                        Contacto
-                    </a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg fixed-top">
+            <div class="container">
+              <a class="row navbar-brand" href="../index.html">
+                <img class="col-6" src="../img/logo.png" alt="logo">
+              </a>
+              <button class="row navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon hamburguesa"></span>
+              </button>
+              <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="col-12 navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-end pages" href="../index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end pagesA" href="servicios.html">
+                            Servicios
+                        </a>        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end pages" href="nosotros.html">
+                            Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end pages" href="motores.html">
+                            Motores
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end pages" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+               </div>
+            </div>
         </nav>
     </header>
-    <main class="serv">
-        <div class="servMant">
-            <div class="servText">
+    <main class="container-fluid serv">
+        <div class="row m-4">
+            <div class="col-sm-12 col-md-6 mt-5 text-center">
                 <h2>Servicio de Mantenimiento</h2>
-                <p>Cambio de correas, bombas, aceite, pastillas de freno, juntas, etc.</p>
+                <p>Cambio de correas, bombas, aceite, pastillas de freno, juntas, etc. Te asesoramos con respecto a las distintas opciones de marcas, evaluando cual es la mejor opción para vos dependiendo de cuánto tenés pensado gastar. Podemos ofrecerte el uso de repuestos originales, segundas y terceras marcas. Siempre con la mejor calidad y contando con una excelente relación con los mejores proveedores de la provincia.</p>
             </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V7dz9IKoCJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="col-md-6 col-sm-12"  height="315" src="https://www.youtube.com/embed/V7dz9IKoCJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="servRotura">
-            <div class="servText">
+        <div class="row m-4 pt-4">
+            <img class="col-sm-12 col-md-8" src="https://picsum.photos/400/200?grayscale" alt="reemplazoBlock" srcset="">
+            <div class="col-sm-12 col-md-4 mt-5 text-center">
                 <h2>Reparación ante rotura</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi tempore exercitationem sequi iusto alias non maxime eos ea quidem sit!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi tempore exercitationem sequi iusto alias non maxime eos ea quidem sit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rerum accusantium qui amet minima eveniet consequatur aut. Odio distinctio iusto quae dolorum officiis, enim sed rerum vitae dicta! Quas, a?</p>
             </div>
-            <img src="https://picsum.photos/400/200?grayscale" alt="reemplazoBlock" srcset="">
+            
         </div>
-        <div class="servEvaluacion">
-            <div class="servText">
+        <div class="row m-4">
+            <div class="col-sm-12 col-md-4 mt-5 text-center">
                 <h2>Evaluación de la computadora</h2>
                 <p>A través de Scanners de última generación, realizamos un diagnóstico completo de la computadora. Identificando y corrigiendo desconfiguraciones de la misma, fallas en múltiples sensores, roturas no identificables bajo exploración manual, etc.</p>
             </div>
-            <img src="https://picsum.photos/400/200?grayscale" alt="">
+            <img class="img-fluid col-sm-12 col-md-8" src="https://picsum.photos/400/200?grayscale" alt="">
+        </div>
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-6 slide marcas" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/marcas/e5f8d0ebd65047e6e30e45299b708c35.png" class="d-block w-10" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/marcas/Chevrolet-logo.png" class="d-block w-10" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/marcas/584831f6cef1014c0b5e4aa6.png.crdownload" class="d-block w-10" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 slide marcas" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/marcas/Volkswagen_logo_2019.svg.png" class="d-block w-10" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/marcas/Ford-Logo-PNG-HD.png" class="d-block w-10" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/marcas/png-transparent-honda-logo.png" class="d-block w-10" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/marcas/fiat-bw-pos-fiat-logo-black-and-white-1249690.png" class="d-block w-10" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-        <div class="containerFooter">
-            <div class="boxFooter">
+
+
+    <footer class="container-fluid footer pt-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 text-center mb-4">
                 <h2>Redes sociales</h2>
                 <a title="instagram" href="https://www.instagram.com/ferlara25" target="_blank"> <i class="fa-brands fa-instagram"></i> Instagram</a>
                 <a title="facebook" href="https://www.facebook.com/fernando.lara.1884//" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a> 
                  <a title="whatsapp" href="https://wa.me/+5493516133578" target="_blank"><i class="fa-brands fa-whatsapp"></i>Whatsapp </a>
             </div>
-            <div class="boxFooter">
+            <div class="col-sm-12 col-md-6 text-center mb-4">
                 <h2>Ubicación</h2>
                 <a href="https://goo.gl/maps/kLdKAVBGRqQvY9Zb9" target="_blank"> <i class="fa-solid fa-map-location-dot"></i>  N. Rodríguez Peña 3210, X5000 Córdoba</a>
             </div>
         </div>
-        <div class="boxCopyright">
+        <div class="row text-center">
             <hr>
             <p> Todos los derechos reservados © 2022
             <b> <a href="https://www.instagram.com/ferlara25" target="_blank"> Fernando Lara </a> </b> </p>
         </div>
     </footer>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
