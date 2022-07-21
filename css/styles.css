@@ -3,7 +3,7 @@
     margin: 0%;
     box-sizing: border-box;
 }
-body {
+body, html {
     font-family: 'Roboto', sans-serif !important;
     background-color: white;
 }
@@ -15,77 +15,34 @@ body {
                          "main"
                          "footer";
 }
-
 @media (max-width: 576px) {
-    header {
-        grid-area: header;
-        z-index: 2;
-        top: 0;
-        margin-top: 0%;
-        background-color: #1d1b1e;
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-    }
-    .logo a img {
-        height: 70%;
-        margin-top: 10px;
-        display: flex;
-        align-items: flex-start;
-    }
-    .menu {
-        display: flex;
-        align-items: center;
-    }
-    .menu ul {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        gap: 0.5rem;
-    }
-    .menuPages {
-        text-decoration: none;
-        color: white;
-    }
-    .menuPagesA {
-        color: #DFBA69;
-        text-decoration: none;
-    }
-
     /*inicio main*/
     .inicio {
         grid-area: main;
         width: 100%;
-        height: 40rem;
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: 3fr 1fr 0.5fr 1fr;
+        grid-template-rows: 2fr 1fr 0.5fr 1fr;
         grid-template-areas: "h1h2 h1h2"
                              "calidad contacto"
                              "botonTurno botonTurno"
                              "tecnología honestidad";
+        align-items: center;
+    }
+    .carousel-item img {
+        width: 100%;
     }
     .h1h2 {
         grid-area: h1h2;
-        background-image: url(../img/backgroundInicio.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .h1h2 h2 {
-        margin-bottom: 1rem;
+        margin-top: -3.2rem;
     }
     .h1h2 h1, .h1h2 h2 {
-        text-align: center;
-        margin-top: 0.1rem;
         color: white;
         text-shadow: 1px 2px 3px #1d1b1e;
+        font-weight: bold;
+        font-size: medium;
     }
+    
     .botonTurno a {
         margin: auto;
         padding: 5px;
@@ -110,26 +67,22 @@ body {
     .calidad {
         grid-area: calidad;
         text-align: center;
-        text-shadow: 1px 1px 2px  grey;
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
     .contacto {
         grid-area: contacto;
         text-align: center;
-        text-shadow: 1px 1px 2px  grey;
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
     .tecnología {
         grid-area: tecnología;
         text-align: center;
-        text-shadow: 1px 1px 2px  grey;
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
     .honestidad {
         grid-area: honestidad;
         text-align: center;
-        text-shadow: 1px 1px 2px  grey;
-        padding: 1.5rem;
+        padding: 0.5rem;        
     }
     /*cierra main*/
 
@@ -296,56 +249,10 @@ body {
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
-    header {
-        grid-area: header;
-        z-index: 2;
-        top: 0;
-        margin-top: 0%;
-        background-color: #1d1b1e;
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-    }
-    .logo a img {
-        height: 70%;
-        margin-top: 10px;
-        margin-left: 5px;
-        display: flex;
-        align-items: flex-start;
-    }
-    
-    .menu {
-        display: flex;
-        align-items: center;
-        height: 80px;
-    }
-    .menu ul {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        gap: 20px;
-    }
-    .menuPages {
-        text-decoration: none;
-        color: white;
-        transition: all 0.2s ease;
-    }
-    .menuPagesA {
-        color: #DFBA69;
-        text-decoration: none;
-    }
-    .menuPages:hover {
-        color: #DFBA69;
-        transform: scale(0.2);
-    } 
-    /*cierra header*/
-
     .inicio {
+        margin: 0%;
         grid-area: main;
         width: 100%;
-        height: 40rem;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: 3fr 1fr 0.5fr 1fr;
@@ -353,24 +260,21 @@ body {
                              "calidad contacto"
                              "botonTurno botonTurno"
                              "tecnología honestidad";
+        align-items: center;
     }
     .h1h2 {
         grid-area: h1h2;
-        background-image: url(../img/backgroundInicio.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
     }
-    .h1h2 h2 {
-        margin-bottom: 1rem;
+    .carousel-item img {
+        width: 100%;
     }
     .h1h2 h1, .h1h2 h2 {
-        margin-top: 0.1rem;
         color: white;
         text-shadow: 1px 2px 3px #1d1b1e;
+        font-weight: bold;
+    }
+    .h1h2 h2 {
+        font-size:  medium;
     }
     .botonTurno a {
         margin: auto;
@@ -413,7 +317,10 @@ body {
         text-align: center;
         padding: 1.5rem;
     }
-    .honestidad, .tecnología, .contacto, .calidad, .botonTurno {
+    .honestidad, .tecnología, .contacto, .calidad{
+        background-color: #f7f4f4;
+        border-radius: 0.5rem;
+        margin: 0.5rem;
         animation-name: indexAnimation;
         animation-duration: 1s;
         animation-iteration-count: initial;
@@ -625,86 +532,39 @@ body {
 
 
 @media (min-width: 992px) {
-    /*header*/
-    header {
-        z-index: 2;
-        top: 0;
-        margin-top: 0%;
-        background-color: #1d1b1e;
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
+    .logo {
+        width: 30%;
     }
-    .logo a img {
-        height: 70%;
-        margin-top: 10px;
-        margin-left: 5px;
-        display: flex;
-        align-items: flex-start;
-    }
-    
-    .menu {
-        display: flex;
-        align-items: center;
-    }
-    .menu ul {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        gap: 20px;
-    }
-    .menuPages {
-        text-decoration: none;
-        color: white;
-    }
-    .menuPagesA {
-        color: #DFBA69;
-        text-decoration: none;
-    }
-    .menu ul li:hover{
-        transform: scale(0.95);
-        color: #DFBA69;
-        transition: all 0.2s ease;
-    }
-    .menuPages:hover {
-        color: #DFBA69;
-    } 
-    /*cierra header*/
-
     .inicio {
+        margin: 0%;
+        grid-area: main;
         width: 100%;
         display: grid;
         grid-template-columns: auto auto auto auto auto;
-        grid-template-rows: 3fr 1fr;
+        grid-template-rows: 2fr 1fr;
         grid-template-areas: "h1h2 h1h2 h1h2 h1h2 h1h2"
                              "calidad contacto botonTurno tecnología honestidad";
         align-items: center;
+
     }
     .h1h2 {
         grid-area: h1h2;
         /*si saco margin-top: -35px la imagen de fondo me queda con un espacio entre ella y el header: */
         margin-top: -35px;
-        background-image: url(../img/backgroundInicio.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-bottom: 1rem;
         height: 30rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 30rem;
     }
     .h1h2 h1, .h1h2 h2 {
         color: white;
+        font-weight: bold;
         text-shadow: 10px 10px 5px #1d1b1e;
-        font-size: 300%;
     }
     .calidad {
         grid-area: calidad;
         text-align: center;
-        border-right: 1px solid;
     }
     .contacto {
         grid-area: contacto;
@@ -717,13 +577,16 @@ body {
     .tecnología {
         grid-area: tecnología;
         text-align: center;
-        border-right: 1px solid;
     }
     .honestidad {
         grid-area: honestidad;
         text-align: center;
     }
     .honestidad, .tecnología, .contacto, .calidad, .botonTurno{
+        background-color: #f7f4f4;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        margin: 2rem;
         animation-name: indexAnimation;
         animation-duration: 1s;
         animation-iteration-count: initial;
@@ -733,6 +596,7 @@ body {
             margin-left: -200rem;
         }
     }
+
     .botonTurno a {
         padding: 1rem;
         border-radius: 6px;
@@ -837,7 +701,7 @@ body {
     .img1 {
         grid-area: img1;
         animation-name: nosotrosAnimation;
-        animation-duration: 1.2s;
+        animation-duration: 0.2s;
         animation-iteration-count: initial;
 
     }
@@ -853,7 +717,7 @@ body {
         text-align: center;
         font-size: x-large;
         animation-name: nosotrosAnimation;
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-iteration-count: initial;
     }
     .p3 {
@@ -861,7 +725,7 @@ body {
         text-align: center;
         font-size: x-large;
         animation-name: nosotrosAnimation;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-iteration-count: initial;
     }
     .p4 {
@@ -869,7 +733,7 @@ body {
         text-align: center;
         font-size: x-large;
         animation-name: nosotrosAnimation;
-        animation-duration: 4s;
+        animation-duration: 3s;
         animation-iteration-count:unset;
         animation-iteration-count: initial;
     }
@@ -878,7 +742,7 @@ body {
         text-align: center;
         font-size: x-large;
         animation-name: nosotrosAnimation;
-        animation-duration: 5s;
+        animation-duration: 4s;
         animation-iteration-count: initial;
     }
     .p6 {
@@ -887,7 +751,7 @@ body {
         font-size: x-large;
         padding-left: 5rem;
         animation-name: nosotrosAnimation;
-        animation-duration: 6s;
+        animation-duration: 5s;
         animation-iteration-count: initial;
     }
     .nosotros iframe {
@@ -974,8 +838,15 @@ body {
 }
 @media (min-width: 992px) {
     .repRotura, .evComp {
-        padding-top: 6rem;
+        padding-top: 2rem;
     }
+}
+header {
+    grid-area: header;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
 }
 .hamburguesa {
     background-color: #DFBA69;
@@ -994,8 +865,9 @@ body {
     background-color: #DFBA69;
 }
 
-.carousel-item img{
+.marcas .carousel-item img{
     width: 50%;
+    height: 50%;
     margin: auto;
 }
 /*cierra servicios */
