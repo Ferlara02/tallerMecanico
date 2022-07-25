@@ -858,12 +858,13 @@ header {
 .pages {
     color: white;
 }
+.nav-item a:hover {
+    color: #DFBA69;
+}
 .pagesA{
     color: #DFBA69;
 }
-.footer {
-    background-color: #DFBA69;
-}
+
 
 .marcas .carousel-item img{
     width: 50%;
@@ -937,3 +938,25 @@ footer .boxCopyright p a {
     margin-right: 5px;
 }
 /*cierra footer*/
+
+/*footer with bootstrap*/
+.footer {
+    background-color: #DFBA69;
+
+}
+.footer a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #7a7a7a;
+    font-weight: bold;
+}
+.footer a:hover {
+    opacity: 0.8;
+}
+.redesBt a i{
+    margin-right: 5px;
+}
+.footer h2 {
+    font-weight: bold;
+}
