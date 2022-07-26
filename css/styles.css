@@ -245,6 +245,14 @@
     .inicio .contacto {
       grid-area: contacto;
       text-align: center; }
+    .inicio .honestidad, .inicio .tecnología, .inicio .contacto, .inicio .calidad, .inicio .botonTurno {
+      background-color: #f7f4f4;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      margin: 2rem;
+      animation-name: indexAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: initial; }
     .inicio .botonTurno {
       grid-area: botonTurno;
       text-align: center;
@@ -269,14 +277,6 @@
     .inicio .honestidad {
       grid-area: honestidad;
       text-align: center; }
-    .inicio .honestidad, .inicio .tecnología, .inicio .contacto, .inicio .calidad, .inicio .botonTurno {
-      background-color: #f7f4f4;
-      border-radius: 1rem;
-      padding: 0.5rem;
-      margin: 2rem;
-      animation-name: indexAnimation;
-      animation-duration: 1s;
-      animation-iteration-count: initial; }
   @keyframes indexAnimation {
     from {
       margin-left: -200rem; } }
