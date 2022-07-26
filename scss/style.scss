@@ -1,0 +1,385 @@
+//import
+@import "utilities/tablet";
+
+@import "utilities/desktop";
+
+//variables
+$colorPrincipal: #DFBA69;
+$colorSecundario: #1d1b1e;
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: white;
+}
+.containerBody {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+@media (max-width: 576px) {
+    /*inicio main*/
+    .inicio {
+        grid-area: main;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 2fr 1fr 0.5fr 1fr;
+        grid-template-areas: "h1h2 h1h2"
+                             "calidad contacto"
+                             "botonTurno botonTurno"
+                             "tecnología honestidad";
+        align-items: center;
+        .h1h2 {
+            grid-area: h1h2;
+            margin-top: -3.2rem;
+            h1, h2 {
+                color: white;
+                text-shadow: 1px 2px 3px #1d1b1e;
+                font-weight: bold;
+                font-size: medium;
+            }
+            .carousel-item img {
+                width: 100%;
+            }
+        }
+        .botonTurno a {
+            margin: auto;
+            padding: 5px;
+            border-radius: 6px;
+            text-align: center;
+            text-shadow: 1px 2px 2px $colorSecundario;
+            border: 1px solid black;
+            color: white;
+            background-color: $colorPrincipal;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .botonTurno {
+            grid-area: botonTurno;
+            margin: auto;
+            background-color: transparent;
+            border: none;
+            text-decoration: none;
+            width: 400px;
+            display: flex;
+        }
+        .calidad {
+            grid-area: calidad;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .contacto {
+            grid-area: contacto;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .tecnología {
+            grid-area: tecnología;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .honestidad {
+            grid-area: honestidad;
+            text-align: center;
+            padding: 0.5rem;        
+        }
+    }
+    /*cierra main*/
+
+    /*motores*/
+    main {
+        grid-area: main;
+        margin-top: 100px;
+        /*afecta a pages/motores y pages/contacto*/
+
+        .motoresRegular {
+            display: flex;
+            flex-direction: column;
+            .regularText {
+                text-align: center;
+                margin: 1rem;
+            }
+            .formReg {
+                width: 90%;
+                color: #9999;
+                border-radius: 3px;
+                background: rgba(0,0,0,0.1);
+            }
+        }
+        .motoresRally {
+            display: flex;
+            flex-direction: column;
+            .rallyText {
+                margin: 1rem;
+                text-align: center;
+            }
+            .formRal {
+                width: 90%;
+                color: #9999;
+                border-radius: 3px;
+                background: rgba(0,0,0,0.1);
+            }
+        }
+    }
+    /*cierra Motores*/
+
+    /*nosotros*/
+
+    .nosotros {
+        grid-area: main;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "img1 p1"
+                             "p3 img2"
+                             "iframe p4"
+                             "p5 p5"
+                             "p6 p6";
+        align-items: center;
+        justify-items: center;
+        .img1 {
+            grid-area: img1;
+            width: 80%;
+            height: 100%;
+        }
+        .img2 {
+            grid-area: img2;
+            width: 90%;
+            height: 80%;
+        }
+        .p1 {
+            grid-area: p1;
+            font-size: small;
+        }
+        .p3 {
+            grid-area: p3;
+            font-size: small;
+            margin: 1rem;
+            text-align: justify;
+        }
+        .p4 {
+            grid-area: p4;
+            font-size: small;
+            text-align: center;
+        }
+        .p5 {
+            grid-area: p5;
+            font-size: small;
+            text-align: center;
+            margin: 1rem;
+        }
+        .p6 {
+            grid-area: p6;
+            font-size: small;
+            text-align: center;
+            margin: 1rem;
+        }
+        iframe {
+            grid-area: iframe;
+            width: 80%;
+            height: 70%;
+        }
+        /*cierra nosotros*/
+    }
+    
+    
+    /*contacto*/
+    form {
+        width: 90%;
+        margin: 40px auto;
+        padding: 20px;
+        color: #9999;
+        border-radius: 3px;
+        background: rgba(0,0,0,0.1);
+        legend{
+            text-align: center;
+            font-size: 30px;
+            color: $colorSecundario;
+            padding: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 7px;
+            font-size: 17px;
+            border: none;
+        }
+        textarea {
+            min-height: 100px;
+            max-width: 100%;
+            font-family: 'Roboto', sans-serif;
+        }
+        .boton {
+            background-color: $colorSecundario;
+            color: $colorPrincipal;
+            padding: 20px;
+            transition: all 0.2s ease;
+        }
+        .boton:hover {
+            cursor: pointer;
+            background-color: $colorPrincipal;
+            color: $colorSecundario;
+        }
+    }
+    .redes{
+        margin: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        a img {
+            width: 80%;
+        }
+    }
+    .turnoH1{
+        font-size: 3rem;
+        padding-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .turnoH2{
+        text-align: center;
+        padding-top: 15px;
+    }
+    /*cierra contacto*/
+}
+
+/*servicios bootstrap*/
+.serv {
+    font-family: 'Roboto', sans-serif !important;
+    margin-top: 6rem;
+}
+@media (min-width: 992px) {
+    .repRotura, .evComp {
+        padding-top: 2rem;
+    }
+}
+header {
+    grid-area: header;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.hamburguesa {
+    background-color: $colorPrincipal;
+}
+.bg {
+    background-color: $colorSecundario;
+    font-size: large;
+}
+.pages {
+    color: white;
+}
+.nav-item a:hover {
+    color: $colorPrincipal;
+}
+.pagesA{
+    color: $colorPrincipal;
+}
+
+
+.marcas .carousel-item img{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+/*cierra servicios */
+
+/*footer con css*/
+footer {
+    grid-area: footer;
+    padding: 0.5rem 0px;
+    top: 100%;
+    bottom: 0%;
+    width: 100%;
+    background-color: $colorPrincipal;
+    background-size: cover;
+    .containerFooter {
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .boxFooter{
+            padding: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                text-align: center;
+                margin-bottom: 3px;
+                color: #343434;
+                font-weight: 700;
+            }
+            a {
+                text-align: center;
+                margin-top: 10px;
+                color: #343434;
+                font-weight: 600;
+                text-decoration: none;
+                .fab{
+                    font-size: 20px; 
+                }
+                i {
+                    margin-right: 5px;
+                }
+            }
+            a:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .boxCopyright {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        padding: 0px 40px;
+        p {
+            margin-top: 20px;
+            color: #7a7a7a;
+            a {
+                text-decoration: none;
+                color: #7a7a7a;
+            }
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #7a7a7a;
+        }
+    }
+}
+/*cierra footer*/
+
+/*footer with bootstrap*/
+.footer {
+    background-color: $colorPrincipal;
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: #343434;
+        font-weight: bold;
+    }
+    a:hover {
+        opacity: 0.8;
+    }
+    h2 {
+        font-weight: bold;
+    }
+}
+.redesBt a i{
+    margin-right: 5px;
+}

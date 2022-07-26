@@ -1,939 +1,755 @@
-* {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-}
-body, html {
-    font-family: 'Roboto', sans-serif !important;
-    background-color: white;
-}
-.containerBody {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header"
-                         "main"
-                         "footer";
-}
-@media (max-width: 576px) {
-    /*inicio main*/
-    .inicio {
-        grid-area: main;
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: 2fr 1fr 0.5fr 1fr;
-        grid-template-areas: "h1h2 h1h2"
-                             "calidad contacto"
-                             "botonTurno botonTurno"
-                             "tecnología honestidad";
-        align-items: center;
-    }
-    .carousel-item img {
-        width: 100%;
-    }
-    .h1h2 {
-        grid-area: h1h2;
-        margin-top: -3.2rem;
-    }
-    .h1h2 h1, .h1h2 h2 {
-        color: white;
-        text-shadow: 1px 2px 3px #1d1b1e;
-        font-weight: bold;
-        font-size: medium;
-    }
-    
-    .botonTurno a {
-        margin: auto;
-        padding: 5px;
-        border-radius: 6px;
-        text-align: center;
-        text-shadow: 1px 2px 2px #1d1b1e;
-        border: 1px solid black;
-        color: white;
-        background-color: #DFBA69;
-        font-size: 20px;
-        text-decoration: none;
-    }
-    .botonTurno {
-        grid-area: botonTurno;
-        margin: auto;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        width: 400px;
-        display: flex;
-    }
-    .calidad {
-        grid-area: calidad;
-        text-align: center;
-        padding: 0.5rem;
-    }
-    .contacto {
-        grid-area: contacto;
-        text-align: center;
-        padding: 0.5rem;
-    }
-    .tecnología {
-        grid-area: tecnología;
-        text-align: center;
-        padding: 0.5rem;
-    }
-    .honestidad {
-        grid-area: honestidad;
-        text-align: center;
-        padding: 0.5rem;        
-    }
-    /*cierra main*/
-
-    /*motores*/
-    main {
-        grid-area: main;
-        margin-top: 100px;
-        /*afecta a pages/motores y pages/contacto*/
-    }
-    
-    .motoresRegular {
-        display: flex;
-        flex-direction: column;
-    }
-    .regularText {
-        text-align: center;
-        margin: 1rem;
-    }
-    .formReg {
-        width: 90%;
-        color: #9999;
-        border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    .motoresRally {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .rallyText {
-        margin: 1rem;
-        text-align: center;
-    }
-    .formRal {
-        width: 90%;
-        color: #9999;
-        border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    /*cierra Motores*/
-
-    /*nosotros*/
-
-    .nosotros {
-        grid-area: main;
-        margin-top: 6rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "img1 p1"
-                             "p3 img2"
-                             "iframe p4"
-                             "p5 p5"
-                             "p6 p6";
-        align-items: center;
-        justify-items: center;
-                             
-    }
-    .img1 {
-        grid-area: img1;
-        width: 80%;
-        height: 100%;
-    }
-    .img2 {
-        grid-area: img2;
-        width: 90%;
-        height: 80%;
-    }
-    .p1 {
-        grid-area: p1;
-        font-size: small;
-    }
-    .p3 {
-        grid-area: p3;
-        font-size: small;
-        margin: 1rem;
-        text-align: justify;
-    }
-    .p4 {
-        grid-area: p4;
-        font-size: small;
-        text-align: center;
-    }
-    .p5 {
-        grid-area: p5;
-        font-size: small;
-        text-align: center;
-        margin: 1rem;
-    }
-    .p6 {
-        grid-area: p6;
-        font-size: small;
-        text-align: center;
-        margin: 1rem;
-    }
-    .nosotros iframe {
-        grid-area: iframe;
-        width: 80%;
-        height: 70%;
-    }
-    /*cierra nosotros*/
-    
-    /*contacto*/
-    form {
-        width: 90%;
-        margin: 40px auto;
-        padding: 20px;
-        color: #9999;
-        border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    legend{
-        text-align: center;
-        font-size: 30px;
-        color: #1d1b1e;
-        padding: 20px;
-    }
-    input, textarea {
-        width: 100%;
-        margin-top: 10px;
-        padding: 7px;
-        font-size: 17px;
-        border: none;
-    }
-    textarea {
-        min-height: 100px;
-        max-width: 100%;
-        font-family: 'Roboto', sans-serif;
-    }
-    .boton {
-        background-color: #1d1b1e;
-        color: #DFBA69;
-        padding: 20px;
-        transition: all 0.2s ease;
-    }
-    .boton:hover {
-        cursor: pointer;
-        background-color: #DFBA69;
-        color: #1d1b1e;
-    }
-    .redes{
-        margin: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    .redes a img {
-        width: 80%;
-    }
-    .turnoH1{
-        font-size: 3rem;
-        padding-top: 40px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    .turnoH2{
-        text-align: center;
-        padding-top: 15px;
-    }
-    /*cierra contacto*/
-}
-
+@charset "UTF-8";
 @media (min-width: 576px) and (max-width: 992px) {
-    .inicio {
-        margin: 0%;
-        grid-area: main;
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: 3fr 1fr 0.5fr 1fr;
-        grid-template-areas: "h1h2 h1h2"
-                             "calidad contacto"
-                             "botonTurno botonTurno"
-                             "tecnología honestidad";
-        align-items: center;
-    }
-    .h1h2 {
-        grid-area: h1h2;
-    }
-    .carousel-item img {
-        width: 100%;
-    }
-    .h1h2 h1, .h1h2 h2 {
+  .inicio {
+    margin: 0%;
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 3fr 1fr 0.5fr 1fr;
+    grid-template-areas: "h1h2 h1h2" "calidad contacto" "botonTurno botonTurno" "tecnología honestidad";
+    align-items: center; }
+    .inicio .h1h2 {
+      grid-area: h1h2; }
+      .inicio .h1h2 .carousel-item img {
+        width: 100%; }
+      .inicio .h1h2 h1, .inicio .h1h2 h2 {
         color: white;
         text-shadow: 1px 2px 3px #1d1b1e;
-        font-weight: bold;
-    }
-    .h1h2 h2 {
-        font-size:  medium;
-    }
-    .botonTurno a {
-        margin: auto;
-        padding: 1rem;
-        border-radius: 6px;
-        text-align: center;
-        text-shadow: 1px 2px 2px #1d1b1e;
-        border: 1px solid black;
-        color: white;
-        background-color: #DFBA69;
-        font-size: 20px;
-        text-decoration: none;
-    }
-    .botonTurno {
-        grid-area: botonTurno;
-        margin: auto;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        width: 400px;
-        display: flex;
-    }
-    .calidad {
-        grid-area: calidad;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    .contacto {
-        grid-area: contacto;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    .tecnología {
-        grid-area: tecnología;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    .honestidad {
-        grid-area: honestidad;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    .honestidad, .tecnología, .contacto, .calidad{
-        background-color: #f7f4f4;
-        border-radius: 0.5rem;
-        margin: 0.5rem;
-        animation-name: indexAnimation;
-        animation-duration: 1s;
-        animation-iteration-count: initial;
-    }
-    @keyframes indexAnimation {
-        from {
-            margin-left: -200rem;
-        }
-    }
-
-    /*motores*/
-    main {
-        grid-area: main;
-        margin-top: 100px;
-        /*afecta a pages/motores y pages/contacto*/
-    }
-
-    .motoresRegular {
-        display: flex;
-        animation-name: regularAnimation;
-        animation-iteration-count: initial;
-        animation-duration: 0.5s;
-    }
-    @keyframes regularAnimation {
-        from {
-            margin-left: -40rem;
-        }
-    }
-    .regularText {
+        font-weight: bold; }
+      .inicio .h1h2 h2 {
+        font-size: medium; }
+    .inicio .botonTurno a {
+      margin: auto;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      text-shadow: 1px 2px 2px #1d1b1e;
+      border: 1px solid black;
+      color: white;
+      background-color: #DFBA69;
+      font-size: 20px;
+      text-decoration: none; }
+    .inicio .botonTurno {
+      grid-area: botonTurno;
+      margin: auto;
+      background-color: transparent;
+      border: none;
+      text-decoration: none;
+      width: 400px;
+      display: flex; }
+    .inicio .calidad {
+      grid-area: calidad;
+      text-align: center;
+      padding: 1.5rem; }
+    .inicio .contacto {
+      grid-area: contacto;
+      text-align: center;
+      padding: 1.5rem; }
+    .inicio .tecnología {
+      grid-area: tecnología;
+      text-align: center;
+      padding: 1.5rem; }
+    .inicio .honestidad {
+      grid-area: honestidad;
+      text-align: center;
+      padding: 1.5rem; }
+    .inicio .honestidad, .inicio .tecnología, .inicio .contacto, .inicio .calidad {
+      background-color: #f7f4f4;
+      border-radius: 0.5rem;
+      margin: 0.5rem;
+      animation-name: indexAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: initial; }
+  @keyframes indexAnimation {
+    from {
+      margin-left: -200rem; } }
+  /*motores*/
+  main {
+    grid-area: main;
+    margin-top: 100px;
+    /*afecta a pages/motores y pages/contacto*/ }
+    main .motoresRegular {
+      display: flex;
+      animation-name: regularAnimation;
+      animation-iteration-count: initial;
+      animation-duration: 0.5s; }
+      main .motoresRegular .regularText {
         width: 40%;
         text-align: center;
         margin-top: 200px;
-        margin-left: 40px;
-    }
-    .formReg {
+        margin-left: 40px; }
+      main .motoresRegular .formReg {
         width: 50%;
         margin: 40px;
         margin-right: 10px;
         padding: 20px;
         color: #9999;
         border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-        justify-content: end;
-    }
-    .motoresRally {
-        display: flex;
-        flex-direction: row-reverse;
-        animation-name: rallyAnimation;
-        animation-iteration-count: initial;
-        animation-duration: 0.5s;
-    }
-    @keyframes rallyAnimation {
-        from {
-            margin-right: -40rem;
-        }
-    }
-
-    .rallyText {
+        background: rgba(0, 0, 0, 0.1);
+        justify-content: end; }
+    main .motoresRally {
+      display: flex;
+      flex-direction: row-reverse;
+      animation-name: rallyAnimation;
+      animation-iteration-count: initial;
+      animation-duration: 0.5s; }
+      main .motoresRally .rallyText {
         width: 40%;
         margin-top: 150px;
         margin-right: 40px;
         margin-bottom: 20px;
-        text-align: center;
-    }
-    .formRal {
+        text-align: center; }
+      main .motoresRally .formRal {
         width: 50%;
         margin: 40px;
         padding: 20px;
         color: #9999;
         border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    /*cierra Motores*/
-
-    /*nosotros*/
-
-    .nosotros {
-        grid-area: main;
-        margin-top: 6rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        height: 60rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "img1 p1"
-                             "p3 img2"
-                             "iframe p4"
-                             "p5 p5"
-                             "p6 p6";
-        align-items: center;
-        justify-items: center;
-                             
-    }
-    .img1 {
-        grid-area: img1;
-        width: 95%;
-    }
-    .img2 {
-        grid-area: img2;
-        width: 95%;
-    }
-    .p1 {
-        grid-area: p1;
-        text-align: center;
-        font-size: larger;
-    }
-    .p3 {
-        grid-area: p3;
-        text-align: center;
-        font-size: larger;
-    }
-    .p4 {
-        grid-area: p4;
-        text-align: center;
-        font-size: larger;
-    }
-    .p5 {
-        grid-area: p5;
-        text-align: center;
-        font-size: larger;
-        margin-right: 5rem;
-        margin-left: 5rem;
-    }
-    .p6 {
-        grid-area: p6;
-        text-align: center;
-        font-size: larger;
-        margin-right: 5rem;
-        margin-left: 5rem;
-    }
+        background: rgba(0, 0, 0, 0.1); }
+  @keyframes rallyAnimation {
+    from {
+      margin-right: -40rem; } }
+  @keyframes regularAnimation {
+    from {
+      margin-left: -40rem; } }
+  /*cierra Motores*/
+  /*nosotros*/
+  .nosotros {
+    grid-area: main;
+    margin-top: 6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 60rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "img1 p1" "p3 img2" "iframe p4" "p5 p5" "p6 p6";
+    align-items: center;
+    justify-items: center; }
+    .nosotros .img1 {
+      grid-area: img1;
+      width: 95%; }
+    .nosotros .img2 {
+      grid-area: img2;
+      width: 95%; }
+    .nosotros .p1 {
+      grid-area: p1;
+      text-align: center;
+      font-size: larger; }
+    .nosotros .p3 {
+      grid-area: p3;
+      text-align: center;
+      font-size: larger; }
+    .nosotros .p4 {
+      grid-area: p4;
+      text-align: center;
+      font-size: larger; }
+    .nosotros .p5 {
+      grid-area: p5;
+      text-align: center;
+      font-size: larger;
+      margin-right: 5rem;
+      margin-left: 5rem; }
+    .nosotros .p6 {
+      grid-area: p6;
+      text-align: center;
+      font-size: larger;
+      margin-right: 5rem;
+      margin-left: 5rem; }
     .nosotros iframe {
-        grid-area: iframe;
-        width: 90%;
-        height: 90%;
-    }
-
-    /*cierra nosotros*/
-
-    /*contacto*/
-    form {
-        width: 70%;
-        margin: 40px auto;
-        padding: 20px;
-        color: #9999;
-        border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    legend{
-        text-align: center;
-        font-size: 30px;
-        color: #1d1b1e;
-        padding: 20px;
-    }
-    input, textarea {
-        width: 100%;
-        margin-top: 10px;
-        padding: 7px;
-        font-size: 17px;
-        border: none;
-    }
-    textarea {
-        min-height: 100px;
-        max-width: 100%;
-        font-family: 'Roboto', sans-serif;
-    }
-    .boton {
-        background-color: #1d1b1e;
-        color: #DFBA69;
-        padding: 20px;
-        transition: all 0.2s ease;
-    }
-    .boton:hover {
-        cursor: pointer;
-        background-color: #DFBA69;
-        color: #1d1b1e;
-    }
-    .redes{
-        margin: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
+      grid-area: iframe;
+      width: 90%;
+      height: 90%; }
+  /*cierra nosotros*/
+  /*contacto*/
+  form {
+    width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+    color: #9999;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1); }
+    form legend {
+      text-align: center;
+      font-size: 30px;
+      color: #1d1b1e;
+      padding: 20px; }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 7px;
+      font-size: 17px;
+      border: none; }
+    form textarea {
+      min-height: 100px;
+      max-width: 100%;
+      font-family: 'Roboto', sans-serif; }
+    form .boton {
+      background-color: #1d1b1e;
+      color: #DFBA69;
+      padding: 20px;
+      transition: all 0.2s ease; }
+    form .boton:hover {
+      cursor: pointer;
+      background-color: #DFBA69;
+      color: #1d1b1e; }
+  .redes {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
     .redes a img {
-        width: 100%;
-    }
-    .turnoH1{
-        font-size: 5rem;
-        padding-top: 90px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    .turnoH2{
-        text-align: center;
-        padding-top: 15px;
-    }
-    /*cierra contacto*/
-}
-
-
-
-
-
-
-
-
-
-
+      width: 70%; }
+  .turnoH1 {
+    font-size: 5rem;
+    padding-top: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .turnoH2 {
+    text-align: center;
+    padding-top: 15px; }
+  /*cierra contacto*/ }
 
 @media (min-width: 992px) {
-    .logo {
-        width: 30%;
-    }
-    .inicio {
-        margin: 0%;
-        grid-area: main;
+  .logo {
+    width: 30%; }
+  .inicio {
+    margin: 0%;
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "h1h2 h1h2 h1h2 h1h2 h1h2" "calidad contacto botonTurno tecnología honestidad";
+    align-items: center; }
+    .inicio .h1h2 {
+      grid-area: h1h2;
+      /*si saco margin-top: -35px la imagen de fondo me queda con un espacio entre ella y el header: */
+      margin-top: -35px;
+      height: 30rem; }
+      .inicio .h1h2 .carousel-item img {
         width: 100%;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: "h1h2 h1h2 h1h2 h1h2 h1h2"
-                             "calidad contacto botonTurno tecnología honestidad";
-        align-items: center;
-
-    }
-    .h1h2 {
-        grid-area: h1h2;
-        /*si saco margin-top: -35px la imagen de fondo me queda con un espacio entre ella y el header: */
-        margin-top: -35px;
-        height: 30rem;
-    }
-    .carousel-item img {
-        width: 100%;
-        height: 30rem;
-    }
-    .h1h2 h1, .h1h2 h2 {
+        height: 30rem; }
+      .inicio .h1h2 h1, .inicio .h1h2 h2 {
         color: white;
         font-weight: bold;
-        text-shadow: 10px 10px 5px #1d1b1e;
-    }
-    .calidad {
-        grid-area: calidad;
-        text-align: center;
-    }
-    .contacto {
-        grid-area: contacto;
-        text-align: center;
-    }
-    .botonTurno {
-        grid-area: botonTurno;
-        text-align: center;
-    }
-    .tecnología {
-        grid-area: tecnología;
-        text-align: center;
-    }
-    .honestidad {
-        grid-area: honestidad;
-        text-align: center;
-    }
-    .honestidad, .tecnología, .contacto, .calidad, .botonTurno{
-        background-color: #f7f4f4;
-        border-radius: 1rem;
-        padding: 0.5rem;
-        margin: 2rem;
-        animation-name: indexAnimation;
-        animation-duration: 1s;
-        animation-iteration-count: initial;
-    }
-    @keyframes indexAnimation {
-        from {
-            margin-left: -200rem;
-        }
-    }
-
-    .botonTurno a {
+        text-shadow: 10px 10px 5px #1d1b1e; }
+    .inicio .calidad {
+      grid-area: calidad;
+      text-align: center; }
+    .inicio .contacto {
+      grid-area: contacto;
+      text-align: center; }
+    .inicio .botonTurno {
+      grid-area: botonTurno;
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      text-decoration: none;
+      display: flex; }
+      .inicio .botonTurno a {
         padding: 1rem;
         border-radius: 6px;
         text-align: center;
-        border: 2px solid #dfba69;
+        border: 2px solid #DFBA69;
         color: black;
         font-size: 20px;
         text-decoration: none;
-        transition: all 0.5s ease;
-    }
-    .botonTurno {
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        display: flex;
-    }
-    .botonTurno a:hover {
-        background-color: #DFBA69;
-    }
-
-    /*motores*/
-    main {
-        grid-area: main;
-        margin-top: 100px;
-        /*afecta a pages/motores y pages/contacto*/
-    }
-
-    .motoresRegular {
-        display: flex;
-        animation-name: regularAnimation;
-        animation-iteration-count: initial;
-        animation-duration: 0.5s;
-    }
-    @keyframes regularAnimation {
-        from {
-            margin-left: -40rem;
-        }
-    }
-    .regularText {
+        transition: all 0.5s ease; }
+      .inicio .botonTurno a:hover {
+        background-color: #DFBA69; }
+    .inicio .tecnología {
+      grid-area: tecnología;
+      text-align: center; }
+    .inicio .honestidad {
+      grid-area: honestidad;
+      text-align: center; }
+    .inicio .honestidad, .inicio .tecnología, .inicio .contacto, .inicio .calidad, .inicio .botonTurno {
+      background-color: #f7f4f4;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      margin: 2rem;
+      animation-name: indexAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: initial; }
+  @keyframes indexAnimation {
+    from {
+      margin-left: -200rem; } }
+  /*cierra index*/
+  /*motores*/
+  main {
+    grid-area: main;
+    margin-top: 100px;
+    /*afecta a pages/motores y pages/contacto*/ }
+    main .motoresRegular {
+      display: flex;
+      animation-name: regularAnimation;
+      animation-iteration-count: initial;
+      animation-duration: 0.5s; }
+      main .motoresRegular .regularText {
         width: 40%;
         text-align: center;
         margin-top: 200px;
-        margin-left: 40px;
-    }
-    .formReg {
+        margin-left: 40px; }
+      main .motoresRegular .formReg {
         width: 50%;
         margin: 40px;
         margin-right: 10px;
         padding: 20px;
         color: #9999;
         border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-        justify-content: end;
-    }
-    .motoresRally {
-        display: flex;
-        flex-direction: row-reverse;
-        animation-name: rallyAnimation;
-        animation-iteration-count: initial;
-        animation-duration: 0.5s;
-    }
-    @keyframes rallyAnimation {
-        from {
-            margin-right: -40rem;
-        }
-    }
-
-    .rallyText {
+        background: rgba(0, 0, 0, 0.1);
+        justify-content: end; }
+  @keyframes regularAnimation {
+    from {
+      margin-left: -40rem; } }
+    main .motoresRally {
+      display: flex;
+      flex-direction: row-reverse;
+      animation-name: rallyAnimation;
+      animation-iteration-count: initial;
+      animation-duration: 0.5s; }
+      main .motoresRally .rallyText {
         width: 40%;
         margin-top: 150px;
         margin-right: 40px;
         margin-bottom: 20px;
-        text-align: center;
-    }
-    .formRal {
+        text-align: center; }
+      main .motoresRally .formRal {
         width: 50%;
         margin: 40px;
         padding: 20px;
         color: #9999;
         border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    /*cierra Motores*/
-
-    /*nosotros*/
-
-    .nosotros {
-        margin-top: 6rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1.5fr;
-        grid-template-areas: "img1 p1 p3"
-                             "p4 p5 img2"
-                             "p6 iframe iframe";
-        align-items: center;
-        justify-items: center;
-        gap: 3rem;
-                             
-    }
-    .img1 {
-        grid-area: img1;
-        animation-name: nosotrosAnimation;
-        animation-duration: 0.2s;
-        animation-iteration-count: initial;
-
-    }
-    .img2 {
-        grid-area: img2;
-        animation-name: nosotrosAnimation;
-        animation-duration: 3.2s;
-        animation-iteration-count: initial;
-
-    }
-    .p1 {
-        grid-area: p1;
-        text-align: center;
-        font-size: x-large;
-        animation-name: nosotrosAnimation;
-        animation-duration: 1s;
-        animation-iteration-count: initial;
-    }
-    .p3 {
-        grid-area: p3;
-        text-align: center;
-        font-size: x-large;
-        animation-name: nosotrosAnimation;
-        animation-duration: 2s;
-        animation-iteration-count: initial;
-    }
-    .p4 {
-        grid-area: p4;
-        text-align: center;
-        font-size: x-large;
-        animation-name: nosotrosAnimation;
-        animation-duration: 3s;
-        animation-iteration-count:unset;
-        animation-iteration-count: initial;
-    }
-    .p5 {
-        grid-area: p5;
-        text-align: center;
-        font-size: x-large;
-        animation-name: nosotrosAnimation;
-        animation-duration: 4s;
-        animation-iteration-count: initial;
-    }
-    .p6 {
-        grid-area: p6;
-        text-align: center;
-        font-size: x-large;
-        padding-left: 5rem;
-        animation-name: nosotrosAnimation;
-        animation-duration: 5s;
-        animation-iteration-count: initial;
-    }
+        background: rgba(0, 0, 0, 0.1); }
+  @keyframes rallyAnimation {
+    from {
+      margin-right: -40rem; } }
+  /*cierra Motores*/
+  /*nosotros*/
+  .nosotros {
+    margin-top: 6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    grid-template-areas: "img1 p1 p3" "p4 p5 img2" "p6 iframe iframe";
+    align-items: center;
+    justify-items: center;
+    gap: 3rem; }
+    .nosotros .img1 {
+      grid-area: img1;
+      animation-name: nosotrosAnimation;
+      animation-duration: 0.2s;
+      animation-iteration-count: initial; }
+    .nosotros .img2 {
+      grid-area: img2;
+      animation-name: nosotrosAnimation;
+      animation-duration: 3.2s;
+      animation-iteration-count: initial; }
+    .nosotros .p1 {
+      grid-area: p1;
+      text-align: center;
+      font-size: x-large;
+      animation-name: nosotrosAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: initial; }
+    .nosotros .p3 {
+      grid-area: p3;
+      text-align: center;
+      font-size: x-large;
+      animation-name: nosotrosAnimation;
+      animation-duration: 2s;
+      animation-iteration-count: initial; }
+    .nosotros .p4 {
+      grid-area: p4;
+      text-align: center;
+      font-size: x-large;
+      animation-name: nosotrosAnimation;
+      animation-duration: 3s;
+      animation-iteration-count: unset;
+      animation-iteration-count: initial; }
+    .nosotros .p5 {
+      grid-area: p5;
+      text-align: center;
+      font-size: x-large;
+      animation-name: nosotrosAnimation;
+      animation-duration: 4s;
+      animation-iteration-count: initial; }
+    .nosotros .p6 {
+      grid-area: p6;
+      text-align: center;
+      font-size: x-large;
+      padding-left: 5rem;
+      animation-name: nosotrosAnimation;
+      animation-duration: 5s;
+      animation-iteration-count: initial; }
     .nosotros iframe {
-        grid-area: iframe;
-        margin: 1rem;
-        animation-name: nosotrosAnimation;
-        animation-duration: 6s;
-        animation-iteration-count: initial;
-    }
-    @keyframes nosotrosAnimation {
-        from {
-            transform: scale(0.6);
-        }
-    }
-    /*cierra nosotros*/
-    
-    /*contacto*/
-    form {
-        width: 70%;
-        margin: 40px auto;
-        padding: 20px;
+      grid-area: iframe;
+      margin: 1rem;
+      animation-name: nosotrosAnimation;
+      animation-duration: 6s;
+      animation-iteration-count: initial; }
+  @keyframes nosotrosAnimation {
+    from {
+      transform: scale(0.6); } }
+  /*cierra nosotros*/
+  /*contacto*/
+  form {
+    width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+    color: #9999;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1); }
+    form legend {
+      text-align: center;
+      font-size: 30px;
+      color: #1d1b1e;
+      padding: 20px; }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 7px;
+      font-size: 17px;
+      border: none; }
+    form textarea {
+      min-height: 100px;
+      max-width: 100%;
+      font-family: 'Roboto', sans-serif; }
+    form .boton {
+      background-color: #1d1b1e;
+      color: #DFBA69;
+      padding: 20px;
+      transition: all 0.2s ease; }
+    form .boton:hover {
+      cursor: pointer;
+      background-color: #DFBA69;
+      color: #1d1b1e; }
+  .redes {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; }
+    .redes a img {
+      width: 80%; }
+  .turnoH1 {
+    font-size: 6rem;
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .turnoH2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 15px; }
+  /*cierra contacto*/ }
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+body, html {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: white; }
+
+.containerBody {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer"; }
+
+@media (max-width: 576px) {
+  /*inicio main*/
+  .inicio {
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 2fr 1fr 0.5fr 1fr;
+    grid-template-areas: "h1h2 h1h2" "calidad contacto" "botonTurno botonTurno" "tecnología honestidad";
+    align-items: center; }
+    .inicio .h1h2 {
+      grid-area: h1h2;
+      margin-top: -3.2rem; }
+      .inicio .h1h2 h1, .inicio .h1h2 h2 {
+        color: white;
+        text-shadow: 1px 2px 3px #1d1b1e;
+        font-weight: bold;
+        font-size: medium; }
+      .inicio .h1h2 .carousel-item img {
+        width: 100%; }
+    .inicio .botonTurno a {
+      margin: auto;
+      padding: 5px;
+      border-radius: 6px;
+      text-align: center;
+      text-shadow: 1px 2px 2px #1d1b1e;
+      border: 1px solid black;
+      color: white;
+      background-color: #DFBA69;
+      font-size: 20px;
+      text-decoration: none; }
+    .inicio .botonTurno {
+      grid-area: botonTurno;
+      margin: auto;
+      background-color: transparent;
+      border: none;
+      text-decoration: none;
+      width: 400px;
+      display: flex; }
+    .inicio .calidad {
+      grid-area: calidad;
+      text-align: center;
+      padding: 0.5rem; }
+    .inicio .contacto {
+      grid-area: contacto;
+      text-align: center;
+      padding: 0.5rem; }
+    .inicio .tecnología {
+      grid-area: tecnología;
+      text-align: center;
+      padding: 0.5rem; }
+    .inicio .honestidad {
+      grid-area: honestidad;
+      text-align: center;
+      padding: 0.5rem; }
+  /*cierra main*/
+  /*motores*/
+  main {
+    grid-area: main;
+    margin-top: 100px;
+    /*afecta a pages/motores y pages/contacto*/ }
+    main .motoresRegular {
+      display: flex;
+      flex-direction: column; }
+      main .motoresRegular .regularText {
+        text-align: center;
+        margin: 1rem; }
+      main .motoresRegular .formReg {
+        width: 90%;
         color: #9999;
         border-radius: 3px;
-        background: rgba(0,0,0,0.1);
-    }
-    legend{
-        text-align: center;
-        font-size: 30px;
-        color: #1d1b1e;
-        padding: 20px;
-    }
-    input, textarea {
-        width: 100%;
-        margin-top: 10px;
-        padding: 7px;
-        font-size: 17px;
-        border: none;
-    }
-    textarea {
-        min-height: 100px;
-        max-width: 100%;
-        font-family: 'Roboto', sans-serif;
-    }
-    .boton {
-        background-color: #1d1b1e;
-        color: #DFBA69;
-        padding: 20px;
-        transition: all 0.2s ease;
-    }
-    .boton:hover {
-        cursor: pointer;
-        background-color: #DFBA69;
-        color: #1d1b1e;
-    }
-    .redes{
-        margin: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
+        background: rgba(0, 0, 0, 0.1); }
+    main .motoresRally {
+      display: flex;
+      flex-direction: column; }
+      main .motoresRally .rallyText {
+        margin: 1rem;
+        text-align: center; }
+      main .motoresRally .formRal {
+        width: 90%;
+        color: #9999;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.1); }
+  /*cierra Motores*/
+  /*nosotros*/
+  .nosotros {
+    grid-area: main;
+    margin-top: 6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "img1 p1" "p3 img2" "iframe p4" "p5 p5" "p6 p6";
+    align-items: center;
+    justify-items: center;
+    /*cierra nosotros*/ }
+    .nosotros .img1 {
+      grid-area: img1;
+      width: 80%;
+      height: 100%; }
+    .nosotros .img2 {
+      grid-area: img2;
+      width: 90%;
+      height: 80%; }
+    .nosotros .p1 {
+      grid-area: p1;
+      font-size: small; }
+    .nosotros .p3 {
+      grid-area: p3;
+      font-size: small;
+      margin: 1rem;
+      text-align: justify; }
+    .nosotros .p4 {
+      grid-area: p4;
+      font-size: small;
+      text-align: center; }
+    .nosotros .p5 {
+      grid-area: p5;
+      font-size: small;
+      text-align: center;
+      margin: 1rem; }
+    .nosotros .p6 {
+      grid-area: p6;
+      font-size: small;
+      text-align: center;
+      margin: 1rem; }
+    .nosotros iframe {
+      grid-area: iframe;
+      width: 80%;
+      height: 70%; }
+  /*contacto*/
+  form {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    color: #9999;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1); }
+    form legend {
+      text-align: center;
+      font-size: 30px;
+      color: #1d1b1e;
+      padding: 20px; }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 7px;
+      font-size: 17px;
+      border: none; }
+    form textarea {
+      min-height: 100px;
+      max-width: 100%;
+      font-family: 'Roboto', sans-serif; }
+    form .boton {
+      background-color: #1d1b1e;
+      color: #DFBA69;
+      padding: 20px;
+      transition: all 0.2s ease; }
+    form .boton:hover {
+      cursor: pointer;
+      background-color: #DFBA69;
+      color: #1d1b1e; }
+  .redes {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
     .redes a img {
-        width: 100%;
-    }
-    .turnoH1{
-        font-size: 6rem;
-        padding-top: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    .turnoH2{
-        font-size: 2rem;
-        text-align: center;
-        padding-top: 15px;
-    }
-    /*cierra contacto*/
-}
+      width: 80%; }
+  .turnoH1 {
+    font-size: 3rem;
+    padding-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .turnoH2 {
+    text-align: center;
+    padding-top: 15px; }
+  /*cierra contacto*/ }
 
 /*servicios bootstrap*/
 .serv {
-    font-family: 'Roboto', sans-serif !important;
-    margin-top: 6rem;
-}
+  font-family: 'Roboto', sans-serif !important;
+  margin-top: 6rem; }
+
 @media (min-width: 992px) {
-    .repRotura, .evComp {
-        padding-top: 2rem;
-    }
-}
+  .repRotura, .evComp {
+    padding-top: 2rem; } }
+
 header {
-    grid-area: header;
-}
+  grid-area: header; }
+
 .navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-}
+  display: flex;
+  justify-content: flex-end; }
+
 .hamburguesa {
-    background-color: #DFBA69;
-}
+  background-color: #DFBA69; }
+
 .bg {
-    background-color: #1d1b1e;
-    font-size: large;
-}
+  background-color: #1d1b1e;
+  font-size: large; }
+
 .pages {
-    color: white;
-}
-.pagesA{
-    color: #DFBA69;
-}
-.footer {
-    background-color: #DFBA69;
-}
+  color: white; }
 
-.marcas .carousel-item img{
-    width: 50%;
-    height: 50%;
-    margin: auto;
-}
+.nav-item a:hover {
+  color: #DFBA69; }
+
+.pagesA {
+  color: #DFBA69; }
+
+.marcas .carousel-item img {
+  width: 50%;
+  height: 50%;
+  margin: auto; }
+
 /*cierra servicios */
-
-/*footer*/
+/*footer con css*/
 footer {
-    grid-area: footer;
-    padding: 0.5rem 0px;
-    top: 100%;
-    bottom: 0%;
-    width: 100%;
-    background-color: #DFBA69;
-    background-size: cover;
-}
-.containerFooter {
+  grid-area: footer;
+  padding: 0.5rem 0px;
+  top: 100%;
+  bottom: 0%;
+  width: 100%;
+  background-color: #DFBA69;
+  background-size: cover; }
+  footer .containerFooter {
     max-width: 1200px;
     margin: auto;
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-.boxFooter{
-    padding: 0.8rem;
-    display: flex;
-    flex-direction: column;
-}
-.boxFooter h2 {
-    text-align: center;
-    margin-bottom: 3px;
-    color: #343434;
-    font-weight: 700;
-}
-.boxFooter a {
-    text-align: center;
-    margin-top: 10px;
-    color: #7a7a7a;
-    font-weight: 600;
-    text-decoration: none;
-}
-.boxFooter a:hover {
-    opacity: 0.8;
-}
-.boxFooter a .fab{
-   font-size: 20px; 
-}
-
-footer .boxCopyright {
+    justify-content: space-around; }
+    footer .containerFooter .boxFooter {
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column; }
+      footer .containerFooter .boxFooter h2 {
+        text-align: center;
+        margin-bottom: 3px;
+        color: #343434;
+        font-weight: 700; }
+      footer .containerFooter .boxFooter a {
+        text-align: center;
+        margin-top: 10px;
+        color: #343434;
+        font-weight: 600;
+        text-decoration: none; }
+        footer .containerFooter .boxFooter a .fab {
+          font-size: 20px; }
+        footer .containerFooter .boxFooter a i {
+          margin-right: 5px; }
+      footer .containerFooter .boxFooter a:hover {
+        opacity: 0.8; }
+  footer .boxCopyright {
     max-width: 1200px;
     margin: auto;
     text-align: center;
-    padding: 0px 40px;
-}
-footer .boxCopyright p {
-    margin-top: 20px;
-    color: #7a7a7a;
-}
-footer .boxCopyright hr {
-    border: none;
-    height: 1px;
-    background-color: #7a7a7a;
-}
-footer .boxCopyright p a {
-    text-decoration: none;
-}
-.boxFooter a i {
-    margin-right: 5px;
-}
+    padding: 0px 40px; }
+    footer .boxCopyright p {
+      margin-top: 20px;
+      color: #7a7a7a; }
+      footer .boxCopyright p a {
+        text-decoration: none;
+        color: #7a7a7a; }
+    footer .boxCopyright hr {
+      border: none;
+      height: 1px;
+      background-color: #7a7a7a; }
+
 /*cierra footer*/
+/*footer with bootstrap*/
+.footer {
+  background-color: #DFBA69; }
+  .footer a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #343434;
+    font-weight: bold; }
+  .footer a:hover {
+    opacity: 0.8; }
+  .footer h2 {
+    font-weight: bold; }
+
+.redesBt a i {
+  margin-right: 5px; }
