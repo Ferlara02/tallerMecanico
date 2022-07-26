@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @media (min-width: 576px) and (max-width: 992px) {
+  /*inicio index*/
   .inicio {
     margin: 0%;
     grid-area: main;
@@ -64,6 +65,7 @@
   @keyframes indexAnimation {
     from {
       margin-left: -200rem; } }
+  /*cierra index*/
   /*motores*/
   main {
     grid-area: main;
@@ -215,6 +217,7 @@
 @media (min-width: 992px) {
   .logo {
     width: 30%; }
+  /*inicio index*/
   .inicio {
     margin: 0%;
     grid-area: main;
@@ -477,10 +480,12 @@ body, html {
     .inicio .h1h2 {
       grid-area: h1h2;
       margin-top: -3.2rem; }
+      .inicio .h1h2 h1 {
+        font-size: large; }
       .inicio .h1h2 h1, .inicio .h1h2 h2 {
         color: white;
-        text-shadow: 1px 2px 3px #1d1b1e;
-        font-weight: bold;
+        font-weight: bold; }
+      .inicio .h1h2 h2 {
         font-size: medium; }
       .inicio .h1h2 .carousel-item img {
         width: 100%; }
@@ -519,7 +524,7 @@ body, html {
       grid-area: honestidad;
       text-align: center;
       padding: 0.5rem; }
-  /*cierra main*/
+  /*cierra index*/
   /*motores*/
   main {
     grid-area: main;

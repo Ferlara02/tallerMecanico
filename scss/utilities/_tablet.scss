@@ -3,6 +3,7 @@ $colorPrincipal: #DFBA69;
 $colorSecundario: #1d1b1e;
 
 @media (min-width: 576px) and (max-width: 992px) {
+    /*inicio index*/
     .inicio {
         margin: 0%;
         grid-area: main;
@@ -84,6 +85,7 @@ $colorSecundario: #1d1b1e;
             margin-left: -200rem;
         }
     }
+    /*cierra index*/
 
     /*motores*/
     main {

@@ -40,10 +40,14 @@ body, html {
         .h1h2 {
             grid-area: h1h2;
             margin-top: -3.2rem;
+            h1 {
+                font-size: large;
+            }
             h1, h2 {
                 color: white;
-                text-shadow: 1px 2px 3px #1d1b1e;
                 font-weight: bold;
+            }
+            h2 {
                 font-size: medium;
             }
             .carousel-item img {
@@ -92,7 +96,7 @@ body, html {
             padding: 0.5rem;        
         }
     }
-    /*cierra main*/
+    /*cierra index*/
 
     /*motores*/
     main {
