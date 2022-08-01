@@ -1,0 +1,28 @@
+@mixin transformaciones($transform){
+    -webkit-transform: $transform;
+    -o-transform: $transform;
+    -moz-transform: $transform;
+    $transform: transform;
+}
+@mixin animaciones($animation){
+    -webkit-animation: $animation;
+    -o-animation: $animation;
+    -moz-animation: $animation;
+}
+
+/*formulario en Page Motores aplicado a tablet y desktop*/
+@mixin formMotores {
+    width: 50%;
+    margin: 40px;
+    padding: 20px;
+    color: #9999;
+    border-radius: 3px;
+    background: rgba(0,0,0,0.1);
+}
+
+/*utilizado en la version Mobile de Nosotros */
+@mixin pNosotros {
+    font-size: small;
+    text-align: center;
+    margin: 1rem;
+}

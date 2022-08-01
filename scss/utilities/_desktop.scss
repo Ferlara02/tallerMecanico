@@ -1,6 +1,6 @@
-//variables
-$colorPrincipal: #DFBA69;
-$colorSecundario: #1d1b1e;
+@import "base/mixin";
+@import "../base/variables";
+@import "../base/extend";
 
 @media (min-width: 992px) {
     .logo {
@@ -68,6 +68,7 @@ $colorSecundario: #1d1b1e;
             }
             a:hover {
                 background-color: $colorPrincipal;
+                @include transformaciones(scale(0.9));
             }
         }
         .tecnología {
@@ -105,13 +106,8 @@ $colorSecundario: #1d1b1e;
                 margin-left: 40px;
             }
             .formReg {
-                width: 50%;
-                margin: 40px;
+                @include formMotores;
                 margin-right: 10px;
-                padding: 20px;
-                color: #9999;
-                border-radius: 3px;
-                background: rgba(0,0,0,0.1);
                 justify-content: end;
             }
         }
@@ -134,12 +130,7 @@ $colorSecundario: #1d1b1e;
                 text-align: center;
             }
             .formRal {
-                width: 50%;
-                margin: 40px;
-                padding: 20px;
-                color: #9999;
-                border-radius: 3px;
-                background: rgba(0,0,0,0.1);
+                @include formMotores;
             }
         }
         @keyframes rallyAnimation {
@@ -230,7 +221,7 @@ $colorSecundario: #1d1b1e;
         }
         @keyframes nosotrosAnimation {
             from {
-                transform: scale(0.6);
+                @include transformaciones(scale(0.6));
             }
         }                     
     }
@@ -286,7 +277,7 @@ $colorSecundario: #1d1b1e;
         }
     }
     .turnoH1{
-        font-size: 6rem;
+        font-size: 4rem;
         padding-top: 50px;
         text-align: center;
         display: flex;

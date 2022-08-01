@@ -1,0 +1,18 @@
+Hola Karina!
+Con respecto a SEO:
+ - Le agregué Keywords y description a cada HTML.
+ - Termine de agregar el ALT correspondiente a cada imagen y sustitui algunos textos lorem (no pude sustituir todos aún).
+ - Comprimi las imagenes del carrusel, que eran muy pesadas (todavia me faltan agregar las imagenes definitivas del taller real, porque no son esas).
+
+Con respecto a SASS:
+- Extend: Use extend para el footer y el Grid del body. (quise extender algunas etiquetas dentro de los @media pero despues me entere que no se puede).
+- Map: No sabía en qué usarlo, así que lo armé con algunos valores del footer.
+- Agregué mixin con parametros de transformaciones y animaciones con sus correspondientes etiquetas de navegadores, para luego utilizarlos en animaciones de:
+	- Boton del Turno en Index.
+	- Animación inicial en la page Nosotros
+- Mixin sin parametros para reutilizar en Formulario Motores regular y Motores rally, ya que tenian los mismos valores.
+- Por ultimo, otro pequeño mixin para reutilizar en todos los parrafos de la page Nosotros.
+
+PD: Creo que ahi solucione lo del colapso del menu hamburguesa en móviles.
+
+Que andes bien.
