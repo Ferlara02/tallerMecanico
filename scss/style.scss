@@ -54,6 +54,7 @@ body, html {
             }
             .carousel-item img {
                 width: 100%;
+                object-fit: center;
             }
         }
         
@@ -381,6 +382,8 @@ footer {
     margin-right: 5px;
 }
 
+/*section Opiniones*/
+
 .testimonios {
     display: flex;
     justify-content: center;
@@ -396,16 +399,20 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    a{
-        text-decoration: none;
-    }
-    span {
-        padding: 0.5rem;
-        font-size: 2.2rem;
-        color: #343434;
-        background-color: $colorPrincipal;
-        border-radius: 0.5rem;
-    }
+        a{
+            text-decoration: none;
+            transition: 0.5s ease;
+            span {
+                padding: 0.5rem;
+                font-size: 2.2rem;
+                color: #343434;
+                box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+                border-radius: 1rem;
+            }
+        }
+        a:hover {
+            @include transformaciones(scale(0.95))
+        }
     }
     .testContainer {
         display: flex;
@@ -449,6 +456,7 @@ footer {
     }
     .testBox:hover{
         @include transformaciones(scale(0.95));
+        box-shadow: none;
     }
-
+    /*cierra opiniones*/
 }
