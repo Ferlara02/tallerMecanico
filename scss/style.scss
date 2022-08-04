@@ -143,18 +143,18 @@ body, html {
 
     .nosotros {
         grid-area: main;
-        margin: 6rem;
-        margin-right: 1rem;
+        margin-top: 6rem;
         margin-left: 1rem;
+        margin-right: 1rem;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-rows: auto auto auto auto auto auto auto auto;
         grid-template-areas: "p1"
                              "img1"
                              "p3" 
                              "img2" 
                              "p4"
-                             "iframe"
+                             "img3"
                              "p5"
                              "p6";
         align-items: center;
@@ -185,11 +185,11 @@ body, html {
         .p1, .p3, .p4, .p5, .p6 {
             @include pNosotros;
         }
-        iframe {
-            grid-area: iframe;
-            width: 90%;
-            height: 80%;
+        .img3 {
+            grid-area: img3;
+            width: 80%;
         }
+        
         /*cierra nosotros*/
     }
     

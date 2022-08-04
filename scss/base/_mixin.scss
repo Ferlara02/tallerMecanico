@@ -22,7 +22,16 @@
 
 /*utilizado en la version Mobile de Nosotros */
 @mixin pNosotros {
-    font-size: small;
-    text-align: center;
+    font-size: 3vw;
+    text-align:center;
     margin: 1rem;
+    padding: 1rem;
+}
+/*desktop nosotros*/
+@mixin imgNosDeskt {
+    width: 100%;
+    animation-iteration-count: initial;
+    padding: 0.8rem;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    transition: 0.5s ease;
 }
