@@ -538,7 +538,8 @@ footer {
 
 body, html {
   font-family: 'Roboto', sans-serif !important;
-  background-color: white; }
+  background-color: white;
+  width: 100%; }
 
 @media (max-width: 576px) {
   .logo {
@@ -553,20 +554,23 @@ body, html {
     grid-area: main;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 2fr 1fr 0.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: "h1h2 h1h2" "calidad contacto" "botonTurno botonTurno" "tecnología honestidad";
     align-items: center; }
     .inicio .h1h2 {
       grid-area: h1h2;
-      margin-top: -3.2rem; }
+      margin-top: -3.2rem;
+      width: 100%; }
       .inicio .h1h2 h1 {
-        font-size: large; }
+        font-size: 4vw; }
       .inicio .h1h2 h1, .inicio .h1h2 h2 {
         color: white;
         font-weight: bold; }
       .inicio .h1h2 h2 {
-        font-size: medium; }
+        font-size: 3vw; }
+      .inicio .h1h2 .carousel-item {
+        width: 100%; }
       .inicio .h1h2 .carousel-item img {
         width: 100%;
         object-fit: center; }
@@ -581,30 +585,37 @@ body, html {
       .inicio .botonTurno a {
         margin: auto;
         padding: 5px;
-        border-radius: 6px;
+        border-radius: 2px;
         text-align: center;
-        text-shadow: 1px 2px 2px #1d1b1e;
-        border: 1px solid black;
-        color: white;
-        background-color: #DFBA69;
+        border: 1px solid #DFBA69;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+        color: black;
         font-size: 20px;
-        text-decoration: none; }
+        text-decoration: none;
+        transition: 0.2s ease-in-out; }
+      .inicio .botonTurno a:active {
+        background-color: #DFBA69;
+        box-shadow: none; }
     .inicio .calidad {
       grid-area: calidad;
       text-align: center;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      margin: 0.5rem; }
     .inicio .contacto {
       grid-area: contacto;
       text-align: center;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      margin: 0.5rem; }
     .inicio .tecnología {
       grid-area: tecnología;
       text-align: center;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      margin: 0.5rem; }
     .inicio .honestidad {
       grid-area: honestidad;
       text-align: center;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      margin: 0.5rem; }
   /*cierra index*/
   /*motores*/
   main {
@@ -725,11 +736,16 @@ body, html {
 .serv {
   font-family: 'Roboto', sans-serif !important;
   margin-top: 6rem; }
+  .serv .marcas .carousel-item img {
+    width: 50%;
+    height: 50%;
+    margin: auto; }
 
 @media (min-width: 992px) {
-  .repRotura, .evComp {
+  .textServ {
     padding-top: 2rem; } }
 
+/*cierra servicios */
 header {
   grid-area: header; }
 
@@ -756,12 +772,6 @@ header {
 .pagesA {
   color: #DFBA69; }
 
-.marcas .carousel-item img {
-  width: 50%;
-  height: 50%;
-  margin: auto; }
-
-/*cierra servicios */
 /*footer con css*/
 footer .containerFooter {
   max-width: 1200px;
@@ -893,3 +903,5 @@ footer .boxCopyright {
     -o-transform: scale(0.95);
     -moz-transform: scale(0.95);
     box-shadow: none; }
+
+/*estilos Servicios*/
