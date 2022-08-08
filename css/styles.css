@@ -376,6 +376,7 @@ footer {
     margin-top: 7rem;
     margin-right: 2rem;
     margin-left: 2rem;
+    padding: 1rem;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
