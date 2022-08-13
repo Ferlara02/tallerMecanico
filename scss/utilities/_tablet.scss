@@ -95,19 +95,19 @@
 
     /*motores*/
     main {
-        grid-area: main;
         margin-top: 100px;
         /*afecta a pages/motores y pages/contacto*/
         .motoresRegular {
+            margin: 1.2rem;
             display: flex;
+            align-items: center;
             animation-name: regularAnimation;
             animation-iteration-count: initial;
             animation-duration: 0.5s;
             .regularText {
-                width: 40%;
+                width: 50%;
+                font-size: 2vw;
                 text-align: center;
-                margin-top: 100px;
-                margin-left: 40px;
             }
             .formReg {
                 @include formMotores;
@@ -117,16 +117,16 @@
         }
         
         .motoresRally {
+            margin: 1.2rem;
             display: flex;
+            align-items: center;
             flex-direction: row-reverse;
             animation-name: rallyAnimation;
             animation-iteration-count: initial;
             animation-duration: 0.5s;
             .rallyText {
-                width: 40%;
-                margin-top: 50px;
-                margin-right: 40px;
-                margin-bottom: 20px;
+                width: 50%;
+                font-size: 2vw;
                 text-align: center;
             }
             .formRal {
@@ -214,6 +214,9 @@
         }                     
     }
     /*cierra nosotros*/
+    /*servicios*/
+
+    /*cierra serv*/
 
     /*contacto*/
     form {
@@ -255,24 +258,25 @@
     }
     
     .redes{
-        margin: 50px;
+        margin: 20px;
         text-align: center;
         display: flex;
         justify-content: center;
         a img {
-            width: 70%;
+            width: 50%;
         }
     }
     .turnoH1{
-        font-size: 5rem;
-        padding-top: 90px;
+        font-size: 3rem;
+        font-weight: bold;
+        padding-top: 10px;
         text-align: center;
         display: flex;
         justify-content: center;
     }
     .turnoH2{
         text-align: center;
-        padding-top: 15px;
+        padding-top: 5px;
     }
     /*cierra contacto*/
 }
