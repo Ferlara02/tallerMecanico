@@ -7,7 +7,6 @@
     /*inicio index*/
     .inicio {
         margin: 0%;
-        grid-area: main;
         width: 100%;
         display: grid;
         grid-template-columns: auto auto;
@@ -149,7 +148,6 @@
     /*nosotros*/
 
     .nosotros {
-        grid-area: main;
         margin-top: 6rem;
         margin-right: 1rem;
         margin-left: 1rem;
@@ -214,9 +212,6 @@
         }                     
     }
     /*cierra nosotros*/
-    /*servicios*/
-
-    /*cierra serv*/
 
     /*contacto*/
     form {
@@ -251,7 +246,6 @@
             transition: all 0.2s ease;
         }
         .boton:hover {
-            cursor: pointer;
             background-color: $colorPrincipal;
             color: $colorSecundario;
         }

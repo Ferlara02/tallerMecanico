@@ -15,7 +15,6 @@ footer {
   /*inicio index*/
   .inicio {
     margin: 0%;
-    grid-area: main;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
@@ -134,7 +133,6 @@ footer {
   /*cierra Motores*/
   /*nosotros*/
   .nosotros {
-    grid-area: main;
     margin-top: 6rem;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -186,8 +184,6 @@ footer {
       width: 100%;
       padding: 0.5rem; }
   /*cierra nosotros*/
-  /*servicios*/
-  /*cierra serv*/
   /*contacto*/
   form {
     width: 70%;
@@ -217,7 +213,6 @@ footer {
       padding: 20px;
       transition: all 0.2s ease; }
     form .boton:hover {
-      cursor: pointer;
       background-color: #DFBA69;
       color: #1d1b1e; }
   .redes {
@@ -253,11 +248,10 @@ footer {
 
 @media (min-width: 992px) {
   .logo {
-    width: 30%; }
+    width: 33%; }
   /*inicio index*/
   .inicio {
     margin: 0%;
-    grid-area: main;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -500,7 +494,6 @@ footer {
       padding: 20px;
       transition: all 0.2s ease; }
     form .boton:hover {
-      cursor: pointer;
       background-color: #DFBA69;
       color: #1d1b1e; }
   .redes {
@@ -556,7 +549,6 @@ body, html {
       width: 60%; }
   /*inicio main*/
   .inicio {
-    grid-area: main;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -623,7 +615,6 @@ body, html {
   /*cierra index*/
   /*motores*/
   main {
-    grid-area: main;
     margin-top: 100px;
     /*afecta a pages/motores y pages/contacto*/ }
     main .motoresRegular {
@@ -651,7 +642,6 @@ body, html {
   /*cierra Motores*/
   /*nosotros*/
   .nosotros {
-    grid-area: main;
     margin-top: 6rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -749,32 +739,29 @@ body, html {
     font-size: 1.2vw; } }
 
 /*cierra servicios */
-header {
-  grid-area: header; }
-
-.logo img {
-  width: 50%; }
-
-.navbar-nav {
-  display: flex;
-  justify-content: flex-end; }
-
-.hamburguesa {
-  background-color: #DFBA69; }
-
+/*header*/
 .bg {
   background-color: #1d1b1e;
   font-size: large; }
+  .bg .logo img {
+    width: 50%; }
+  .bg .navbar-nav {
+    display: flex;
+    justify-content: flex-end; }
+    .bg .navbar-nav .pages {
+      color: white;
+      margin: 0 0.4rem; }
+    .bg .navbar-nav .pagesA {
+      color: #DFBA69;
+      margin: 0 0.4rem; }
+    .bg .navbar-nav .nav-item a:hover {
+      color: #DFBA69; }
+  .bg .navbar-toggler {
+    color: transparent; }
+    .bg .navbar-toggler .hamburguesa {
+      background-color: #DFBA69; }
 
-.pages {
-  color: white; }
-
-.nav-item a:hover {
-  color: #DFBA69; }
-
-.pagesA {
-  color: #DFBA69; }
-
+/*cierra header*/
 /*footer con css*/
 footer .containerFooter {
   max-width: 1200px;
@@ -835,9 +822,12 @@ footer .boxCopyright {
     opacity: 0.8; }
   .footer h2 {
     font-weight: bold; }
-
-.redesBt a i {
-  margin-right: 5px; }
+  .footer .footerServ {
+    color: #7a7a7a; }
+    .footer .footerServ b a {
+      color: #7a7a7a; }
+  .footer .redesBt a i {
+    margin-right: 5px; }
 
 /*section Opiniones*/
 .testimonios {

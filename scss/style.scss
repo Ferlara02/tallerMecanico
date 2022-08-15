@@ -29,7 +29,6 @@ body, html {
     
     /*inicio main*/
     .inicio {
-        grid-area: main;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -116,10 +115,8 @@ body, html {
 
     /*motores*/
     main {
-        grid-area: main;
         margin-top: 100px;
         /*afecta a pages/motores y pages/contacto*/
-
         .motoresRegular {
             display: flex;
             flex-direction: column;
@@ -154,7 +151,6 @@ body, html {
     /*nosotros*/
 
     .nosotros {
-        grid-area: main;
         margin-top: 6rem;
         margin-left: 1rem;
         margin-right: 1rem;
@@ -284,33 +280,36 @@ body, html {
 }
 /*cierra servicios */
 
-header {
-    grid-area: header;
-}
-
-.logo img{
-    width: 50%;
-}
-.navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-}
-.hamburguesa {
-    background-color: $colorPrincipal;
-}
+/*header*/
 .bg {
     background-color: $colorSecundario;
     font-size: large;
+    .logo img{
+        width: 50%;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+        .pages {
+            color: white;
+            margin: 0 0.4rem;
+        }
+        .pagesA{
+            color: $colorPrincipal;
+            margin: 0 0.4rem;
+        }
+        .nav-item a:hover {
+            color: $colorPrincipal;
+        }
+    }
+    .navbar-toggler {
+        color: transparent;
+        .hamburguesa {
+            background-color: $colorPrincipal;
+        }
+    }
 }
-.pages {
-    color: white;
-}
-.nav-item a:hover {
-    color: $colorPrincipal;
-}
-.pagesA{
-    color: $colorPrincipal;
-}
+/*cierra header*/
 
 
 /*footer con css*/
@@ -389,10 +388,17 @@ footer {
     h2 {
         font-weight: bold;
     }
+    .footerServ {
+        color: map-get($map: $vFooter, $key: colorCopyright);
+        b a {
+            color: map-get($map: $vFooter, $key: colorCopyright);
+        }
+    }
+    .redesBt a i{
+        margin-right: 5px;
+    }
 }
-.redesBt a i{
-    margin-right: 5px;
-}
+
 
 /*section Opiniones*/
 

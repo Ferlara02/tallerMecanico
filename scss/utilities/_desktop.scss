@@ -4,12 +4,11 @@
 
 @media (min-width: 992px) {
     .logo {
-        width: 30%;
+        width: 33%;
     }
     /*inicio index*/ 
     .inicio {
         margin: 0%;
-        grid-area: main;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -279,7 +278,6 @@
             transition: all 0.2s ease;
         }
         .boton:hover {
-            cursor: pointer;
             background-color: $colorPrincipal;
             color: $colorSecundario;
         }
