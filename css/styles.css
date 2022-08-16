@@ -85,6 +85,10 @@ footer {
   main {
     margin-top: 100px;
     /*afecta a pages/motores y pages/contacto*/ }
+    main .armadoH1 {
+      text-align: center;
+      color: #DFBA69;
+      background-color: #1d1b1e; }
     main .motoresRegular {
       margin: 1.2rem;
       display: flex;
@@ -138,51 +142,58 @@ footer {
     margin-left: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "img1 p1" "p3 img2" "img3 p4" "p5 p5" "p6 p6";
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "h1 h1" "img1 p1" "p3 img2" "img3 p4" "p5 p5" "p6 p6";
     align-items: center;
     justify-items: center; }
+    .nosotros h1 {
+      grid-area: h1;
+      margin: 0.5rem; }
     .nosotros .img1 {
       grid-area: img1;
       width: 100%;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); }
     .nosotros .img2 {
       grid-area: img2;
       width: 100%;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); }
     .nosotros .p1 {
       grid-area: p1;
       text-align: center;
       font-size: 2vw;
-      padding: 0.5rem; }
+      padding: 0.7rem; }
     .nosotros .p3 {
       grid-area: p3;
       text-align: center;
       font-size: 2vw;
-      padding: 0.5rem; }
+      padding: 0.6rem; }
     .nosotros .p4 {
       grid-area: p4;
       text-align: center;
       font-size: 2vw;
-      padding: 0.5rem; }
+      padding: 0.8rem; }
     .nosotros .p5 {
       grid-area: p5;
       text-align: center;
       font-size: 2vw;
       margin-right: 5rem;
       margin-left: 5rem;
-      padding: 0.5rem; }
+      padding: 0.7rem; }
     .nosotros .p6 {
       grid-area: p6;
       text-align: center;
       font-size: 2vw;
       margin-right: 5rem;
       margin-left: 5rem;
-      padding: 0.5rem; }
+      padding: 0.7rem;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); }
     .nosotros .img3 {
       grid-area: img3;
       width: 100%;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); }
   /*cierra nosotros*/
   /*contacto*/
   form {
@@ -323,6 +334,10 @@ footer {
   main {
     margin-top: 100px;
     /*afecta a pages/motores y pages/contacto*/ }
+    main .armadoH1 {
+      text-align: center;
+      color: #DFBA69;
+      background-color: #1d1b1e; }
     main .motoresRegular {
       margin: 2rem;
       display: flex;
@@ -373,8 +388,8 @@ footer {
     margin-left: 2rem;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "img1 p1 p3" "p4 p5 img2" "p6 p6 img3";
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "h1 h1 h1"  "img1 p1 p3" "p4 p5 img2" "p6 p6 img3";
     align-items: center;
     justify-items: center; }
     .nosotros .img1:hover, .nosotros .img2:hover, .nosotros .img3:hover {
@@ -382,6 +397,9 @@ footer {
       -o-transform: scale(1.05);
       -moz-transform: scale(1.05);
       box-shadow: none; }
+    .nosotros h1 {
+      grid-area: h1;
+      margin: 1rem; }
     .nosotros .img1 {
       grid-area: img1;
       width: 100%;
@@ -617,6 +635,10 @@ body, html {
   main {
     margin-top: 100px;
     /*afecta a pages/motores y pages/contacto*/ }
+    main .armadoH1 {
+      text-align: center;
+      color: #DFBA69;
+      background-color: #1d1b1e; }
     main .motoresRegular {
       display: flex;
       flex-direction: column; }
@@ -647,11 +669,15 @@ body, html {
     margin-right: 1rem;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
-    grid-template-areas: "p1" "img1" "p3"  "img2"  "p4" "img3" "p5" "p6";
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: "h1" "p1" "img1" "p3"  "img2"  "p4" "img3" "p5" "p6";
     align-items: center;
     justify-items: center;
     /*cierra nosotros*/ }
+    .nosotros h1 {
+      grid-area: h1;
+      margin: 0;
+      margin-top: 0.5rem; }
     .nosotros .img1 {
       grid-area: img1;
       width: 80%; }
@@ -667,7 +693,8 @@ body, html {
     .nosotros .p5 {
       grid-area: p5; }
     .nosotros .p6 {
-      grid-area: p6; }
+      grid-area: p6;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); }
     .nosotros .p1, .nosotros .p3, .nosotros .p4, .nosotros .p5, .nosotros .p6 {
       font-size: 3vw;
       text-align: center;

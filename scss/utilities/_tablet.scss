@@ -96,6 +96,11 @@
     main {
         margin-top: 100px;
         /*afecta a pages/motores y pages/contacto*/
+        .armadoH1 {
+            text-align: center;
+            color: $colorPrincipal;
+            background-color: $colorSecundario;
+        }
         .motoresRegular {
             margin: 1.2rem;
             display: flex;
@@ -153,41 +158,48 @@
         margin-left: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "img1 p1"
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "h1 h1"
+                             "img1 p1"
                              "p3 img2"
                              "img3 p4"
                              "p5 p5"
                              "p6 p6";
         align-items: center;
         justify-items: center;
+        h1 {
+            grid-area: h1;
+            margin: 0.5rem;
+        }
         .img1 {
             grid-area: img1;
             width: 100%;
             padding: 0.5rem;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
         }
         .img2 {
             grid-area: img2;
             width: 100%;
             padding: 0.5rem;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
         }
         .p1 {
             grid-area: p1;
             text-align: center;
             font-size: 2vw;
-            padding: 0.5rem;
+            padding: 0.7rem;
         }
         .p3 {
             grid-area: p3;
             text-align: center;
             font-size: 2vw;
-            padding: 0.5rem;
+            padding: 0.6rem;
         }
         .p4 {
             grid-area: p4;
             text-align: center;
             font-size: 2vw;
-            padding: 0.5rem;
+            padding: 0.8rem;
         }
         .p5 {
             grid-area: p5;
@@ -195,7 +207,7 @@
             font-size: 2vw;
             margin-right: 5rem;
             margin-left: 5rem;
-            padding: 0.5rem;
+            padding: 0.7rem;
         }
         .p6 {
             grid-area: p6;
@@ -203,12 +215,14 @@
             font-size: 2vw;
             margin-right: 5rem;
             margin-left: 5rem;
-            padding: 0.5rem;
+            padding: 0.7rem;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
         }
         .img3 {
             grid-area: img3;
             width: 100%;
             padding: 0.5rem;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
         }                     
     }
     /*cierra nosotros*/

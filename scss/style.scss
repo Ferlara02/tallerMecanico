@@ -117,6 +117,11 @@ body, html {
     main {
         margin-top: 100px;
         /*afecta a pages/motores y pages/contacto*/
+        .armadoH1 {
+            text-align: center;
+            color: $colorPrincipal;
+            background-color: $colorSecundario;
+        }
         .motoresRegular {
             display: flex;
             flex-direction: column;
@@ -156,8 +161,9 @@ body, html {
         margin-right: 1rem;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
-        grid-template-areas: "p1"
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "h1"
+                             "p1"
                              "img1"
                              "p3" 
                              "img2" 
@@ -167,6 +173,11 @@ body, html {
                              "p6";
         align-items: center;
         justify-items: center;
+        h1 {
+            grid-area: h1;
+            margin: 0;
+            margin-top: 0.5rem;
+        }
         .img1 {
             grid-area: img1;
             width: 80%;
@@ -189,6 +200,7 @@ body, html {
         }
         .p6 {
             grid-area: p6;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
         }
         .p1, .p3, .p4, .p5, .p6 {
             @include pNosotros;
